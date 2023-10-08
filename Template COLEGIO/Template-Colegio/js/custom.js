@@ -50,33 +50,6 @@
 // Dropdowns
 // JavaScript personalizado
 
-$(document).ready(function() {
-    // Agregar un evento de clic a todos los botones de dropdown con la clase "dropdown-toggle"
-    $('.dropdown-toggle').on('click', function(event) {
-        // Evitar el comportamiento predeterminado del botón para que no se cierre inmediatamente
-        event.preventDefault();
-        
-        var dropdownMenu = $(this).next('.dropdown-menu');
-        
-        // Verificar si el menú está visible
-        var isVisible = dropdownMenu.is(':visible');
-        
-        // Cerrar todos los dropdowns antes de abrir el seleccionado
-        $('.dropdown-menu').hide();
-        
-        // Si el menú no estaba visible, ábrelo; de lo contrario, ciérralo
-        if (!isVisible) {
-            dropdownMenu.show();
-        }
-    });
-    
-    // Agregar un evento de clic al documento para cerrar el dropdown si se hace clic en cualquier otro lugar
-    $(document).on('click', function(event) {
-        if (!$(event.target).closest('.dropdown').length) {
-            $('.dropdown-menu').hide();
-        }
-    });
-});
 
 
 

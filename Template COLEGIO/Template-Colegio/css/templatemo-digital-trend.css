@@ -681,6 +681,7 @@ https://templatemo.com/tm-538-digital-trend
 #imgcocina2{
   margin-left: 35%;
   width: 35%;
+  z-index: -1000;
 }
 #Nombre{
   text-align: center;
@@ -699,22 +700,37 @@ https://templatemo.com/tm-538-digital-trend
   text-align: center;
 } 
 /* Asegurarse de que el dropdown se despliegue hacia abajo solamente */
+css
 .dropdown-menu {
-  top: 100%;
-  left: 0;
-  right: auto;
-  max-height: initial; /* Restablecer la altura máxima */
-  /* transform-origin: center top; */
+    top: -100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 }
 
 
 .dropdown-menu .show {
-  display: block;
+  display:block;
 }
 
 .dropdown-toggle {
   font-size: 25px;
-  padding: 20px 100px; /* Aumenta el espacio de relleno horizontal */
+  padding: 20px 60px; /* Aumenta el espacio de relleno horizontal */
 }
 
 /* Estilo para hacer más grande el menú desplegable */
@@ -725,13 +741,13 @@ https://templatemo.com/tm-538-digital-trend
 
 /* Cambia el fondo de las opciones a gris claro */
 .dropdown-menu a.dropdown-item {
-  background-color: #f0f0f0; /* Color de fondo gris claro */
+  background-color: var(--gray-color); /* Color de fondo gris claro */
   color: #333; /* Color de texto */
 }
 
 /* Cambia el color del texto cuando se pasa el mouse sobre las opciones */
 .dropdown-menu a.dropdown-item:hover {
-  background-color: #ccc; /* Color de fondo gris más claro al pasar el mouse */
+  background-color: var(--gray-color); /* Color de fondo gris más claro al pasar el mouse */
   color: #333; /* Color de texto */
 }
 
@@ -804,7 +820,12 @@ button:hover{
 #basicoslista{
   color: #000000;
 }
-
-#comentariochef{
+.container{
+z-index: 100000000;
+}
+.comentario{
   text-align: justify;
+}
+.dropdown {
+  z-index: 100;
 }

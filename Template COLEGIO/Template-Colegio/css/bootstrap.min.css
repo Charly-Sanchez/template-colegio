@@ -69,7 +69,6 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  text-align: justify;
   background-color: #fff;
 }
 [tabindex="-1"]:focus {
@@ -427,7 +426,8 @@ mark {
 .img-fluid {
   max-width: 100%;
   height: auto;
-  z-index: 50;
+  z-index: -10;
+  background: transparent;
 }
 .img-thumbnail {
   padding: 0.25rem;
@@ -2882,12 +2882,12 @@ input[type="submit"].btn-block {
 }
 .dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: -100%;
   left: 0;
-  z-index: 1000;
+  z-index: 100000000000000000000;
   display: none;
   float: left;
-  min-width: 10rem;
+  min-width: 20rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
@@ -2896,7 +2896,7 @@ input[type="submit"].btn-block {
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 5px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
 }
 .dropdown-menu-right {
@@ -2957,7 +2957,7 @@ input[type="submit"].btn-block {
 }
 .dropup .dropdown-menu {
   top: auto;
-  bottom: 100%;
+  bottom: -100%;
   margin-top: 0;
   margin-bottom: 0.125rem;
 }
